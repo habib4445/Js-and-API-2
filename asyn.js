@@ -1,13 +1,14 @@
-const loadData=()=>{
-    console.log(1);
-    console.log(2);
+const loadData = async () => {
+  console.log(1);
+  console.log(2);
 
-    setTimeout(()=> {
-        console.log('Its time out')
-    },1000)
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const data = await response.json();
+  console.log(data);
 
-    const num=10+10;
-    console.log(num);
-    console.log("At last");
-}
+  const num = 10 + 10;
+  console.log(num);
+  console.log("At last");
+};
+
 loadData();
